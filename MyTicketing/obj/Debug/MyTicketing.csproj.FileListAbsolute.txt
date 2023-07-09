@@ -1,0 +1,13 @@
+D:\trc#\MyTicketing\MyTicketing\bin\Debug\MyTicketing.exe.config
+D:\trc#\MyTicketing\MyTicketing\bin\Debug\MyTicketing.exe
+D:\trc#\MyTicketing\MyTicketing\bin\Debug\MyTicketing.pdb
+D:\trc#\MyTicketing\MyTicketing\obj\Debug\MyTicketing.csproj.AssemblyReference.cache
+D:\trc#\MyTicketing\MyTicketing\obj\Debug\MyTicketing.Form1.resources
+D:\trc#\MyTicketing\MyTicketing\obj\Debug\MyTicketing.Properties.Resources.resources
+D:\trc#\MyTicketing\MyTicketing\obj\Debug\MyTicketing.csproj.GenerateResource.cache
+D:\trc#\MyTicketing\MyTicketing\obj\Debug\MyTicketing.csproj.CoreCompileInputs.cache
+D:\trc#\MyTicketing\MyTicketing\obj\Debug\MyTicketing.exe
+D:\trc#\MyTicketing\MyTicketing\obj\Debug\MyTicketing.pdb
+D:\trc#\MyTicketing\MyTicketing\obj\Debug\MyTicketing.frmadmin.resources
+D:\trc#\MyTicketing\MyTicketing\obj\Debug\MyTicketing.frmuser.resources
+D:\trc#\MyTicketing\MyTicketing\obj\Debug\MyTicketing.frmaddticket.resources

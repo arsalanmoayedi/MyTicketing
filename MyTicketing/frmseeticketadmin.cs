@@ -19,7 +19,7 @@ namespace MyTicketing
             InitializeComponent();
             Repository = new TicketingRepository();
         }
-        
+
         private void frmseeticketadmin_Load(object sender, EventArgs e)
         {
             if (contactid != 0)
@@ -40,7 +40,7 @@ namespace MyTicketing
         private void btnSubmitTicket_Click(object sender, EventArgs e)
         {
             bool issucces = Repository.Insertanswer(contactid, txtanswer.Text);
-            if (issucces==true)
+            if (issucces == true)
             {
                 MessageBox.Show(" عملیات با موفقیت انجام شد", "موفق", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DialogResult = DialogResult.OK;

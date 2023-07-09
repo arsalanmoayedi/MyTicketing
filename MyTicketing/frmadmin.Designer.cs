@@ -33,8 +33,6 @@ namespace MyTicketing
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnseeticketaddmin = new System.Windows.Forms.Button();
             this.dgadmin = new System.Windows.Forms.DataGridView();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnrefrshadmin = new System.Windows.Forms.ToolStripButton();
             this.ContactID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Namee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Family = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +41,8 @@ namespace MyTicketing
             this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.answerr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnrefrshadmin = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgadmin)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -50,6 +50,7 @@ namespace MyTicketing
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.groupBox1.Controls.Add(this.btnseeticketaddmin);
             this.groupBox1.Controls.Add(this.dgadmin);
             this.groupBox1.Location = new System.Drawing.Point(12, 40);
@@ -89,26 +90,6 @@ namespace MyTicketing
             this.dgadmin.ReadOnly = true;
             this.dgadmin.Size = new System.Drawing.Size(760, 245);
             this.dgadmin.TabIndex = 0;
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnrefrshadmin});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(784, 25);
-            this.toolStrip1.TabIndex = 1;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // btnrefrshadmin
-            // 
-            this.btnrefrshadmin.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnrefrshadmin.Image = ((System.Drawing.Image)(resources.GetObject("btnrefrshadmin.Image")));
-            this.btnrefrshadmin.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnrefrshadmin.Name = "btnrefrshadmin";
-            this.btnrefrshadmin.Size = new System.Drawing.Size(23, 22);
-            this.btnrefrshadmin.Text = "رفرش";
-            this.btnrefrshadmin.Click += new System.EventHandler(this.btnrefrshadmin_Click);
             // 
             // ContactID
             // 
@@ -167,6 +148,26 @@ namespace MyTicketing
             this.answerr.Name = "answerr";
             this.answerr.ReadOnly = true;
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnrefrshadmin});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(784, 25);
+            this.toolStrip1.TabIndex = 1;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // btnrefrshadmin
+            // 
+            this.btnrefrshadmin.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnrefrshadmin.Image = ((System.Drawing.Image)(resources.GetObject("btnrefrshadmin.Image")));
+            this.btnrefrshadmin.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnrefrshadmin.Name = "btnrefrshadmin";
+            this.btnrefrshadmin.Size = new System.Drawing.Size(23, 22);
+            this.btnrefrshadmin.Text = "رفرش";
+            this.btnrefrshadmin.Click += new System.EventHandler(this.btnrefrshadmin_Click);
+            // 
             // frmadmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -175,6 +176,7 @@ namespace MyTicketing
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.Purple;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmadmin";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;

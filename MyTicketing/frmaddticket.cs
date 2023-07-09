@@ -22,7 +22,7 @@ namespace MyTicketing
 
         private bool ValidateInput()
         {
-            if (txtname.Text=="")
+            if (txtname.Text == "")
             {
                 MessageBox.Show(" لطفا نام را وارد کنید ", "توجه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
@@ -71,6 +71,7 @@ namespace MyTicketing
                 txtemail.Text = dg.Rows[0][4].ToString();
                 txttitle.Text = dg.Rows[0][5].ToString();
                 txtdescription.Text = dg.Rows[0][6].ToString();
+                txtanswer.Text = dg.Rows[0][7].ToString();
                 btnsubmitticket.Text = "دیدن جواب";
             }
         }
@@ -78,19 +79,23 @@ namespace MyTicketing
         {
             if (ValidateInput())
             {
+                if (txtanswer.Text != "")
+                {
+                    MessageBox.Show("شما نباید قسمت جواب را پر کنید", "توجه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
                 bool inssucces;
-                if (contactid==0)
+                if (contactid == 0)
                 {
                     Repository.Insert(txtname.Text, txtfamily.Text, txtphonenumber.Text, txtemail.Text, txttitle.Text, txtdescription.Text);
                     inssucces = true;
                 }
                 else
                 {
-                    MessageBox.Show("برگرد عقب داش");
                     inssucces = true;
                 }
-               
-                if (inssucces==true)
+
+                if (inssucces == true)
                 {
                     MessageBox.Show(" عملیات با موفقیت انجام شد", "موفق", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     DialogResult = DialogResult.OK;
@@ -98,9 +103,9 @@ namespace MyTicketing
                 else
                 {
                     MessageBox.Show(" عملیات با موفقیت انجام نشد", "ناموفق", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
+
                 }
-                
+
             }
         }
 

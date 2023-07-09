@@ -11,9 +11,8 @@ namespace MyTicketing
     {
         DataTable SelectAll();
         DataTable SelectRow(int contactID);
-
-       bool Insertanswer(int contactid ,string answer);
-        bool Insert(string name, string family, string number, string email, string title, string description );
+        bool Insertanswer(int contactid, string answer);
+        bool Insert(string name, string family, string number, string email, string title, string description);
         bool Delete(int contactID);
     }
 }

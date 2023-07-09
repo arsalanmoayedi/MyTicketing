@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 
-namespace MyTicketing 
+namespace MyTicketing
 {
     class TicketingRepository : ITicketingRepository
     {
@@ -34,34 +34,6 @@ namespace MyTicketing
             }
         }
 
-        //public bool Insert(string name, string family, string number, string email, string title, string description)
-        //{
-        //    SqlConnection connection = new SqlConnection(ConnectioString);
-        //    try
-        //    {
-        //        string query = "insert into MyTicketing (name,family,number,email,tiltile,description,) values (@name,@family,@number,@email,@title,@description)";
-        //        SqlCommand command = new SqlCommand(query, connection);
-        //        command.Parameters.AddWithValue("@name", name);
-        //        command.Parameters.AddWithValue("@family", family);
-        //        command.Parameters.AddWithValue("@number", number);
-        //        command.Parameters.AddWithValue("@email", email);
-        //        command.Parameters.AddWithValue("@title", title);
-        //        command.Parameters.AddWithValue("@description", description);
-        //        connection.Open();
-        //        command.ExecuteNonQuery();
-        //        return true;
-        //    }
-        //    catch (Exception)
-        //    {
-
-        //        return false;
-        //    }
-        //    finally
-        //    {
-        //        connection.Close();
-        //    }
-        //}
-
         public bool Insert(string name, string family, string number, string email, string title, string description)
         {
             SqlConnection connection = new SqlConnection(ConnectioString);
@@ -75,7 +47,6 @@ namespace MyTicketing
                 command.Parameters.AddWithValue("@email", email);
                 command.Parameters.AddWithValue("@title", title);
                 command.Parameters.AddWithValue("@description", description);
-              //  command.Parameters.AddWithValue("@answer", answer);
                 connection.Open();
                 command.ExecuteNonQuery();
                 return true;
@@ -91,7 +62,7 @@ namespace MyTicketing
             }
         }
 
-        public bool Insertanswer(int contactid ,string answer)
+        public bool Insertanswer(int contactid, string answer)
         {
             SqlConnection connection = new SqlConnection(ConnectioString);
             try
@@ -127,7 +98,7 @@ namespace MyTicketing
 
         public DataTable SelectRow(int contactID)
         {
-            string Query = "select * from MyTicketing where contactid="+contactID;
+            string Query = "select * from MyTicketing where contactid=" + contactID;
             SqlConnection connection = new SqlConnection(ConnectioString);
             SqlDataAdapter adapter = new SqlDataAdapter(Query, connection);
             DataTable data = new DataTable();

@@ -27,7 +27,7 @@ namespace MyTicketing
         {
             this.Text = "خوش اومدی ";
             BindeGrid();
-            
+
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -39,7 +39,7 @@ namespace MyTicketing
         {
             frmaddticket frmaddticket = new frmaddticket();
             frmaddticket.ShowDialog();
-            if (frmaddticket.DialogResult==DialogResult.OK)
+            if (frmaddticket.DialogResult == DialogResult.OK)
             {
                 BindeGrid();
             }
@@ -48,26 +48,26 @@ namespace MyTicketing
         private void btndeleteticket_Click(object sender, EventArgs e)
         {
             string title = dguser.CurrentRow.Cells[5].Value.ToString();
-            if (MessageBox.Show($" آیا از حذف تیکت با عنوان {title} مطمئن هستید", "توجه", MessageBoxButtons.YesNo, MessageBoxIcon.Information)==DialogResult.Yes)
+            if (MessageBox.Show($" آیا از حذف تیکت با عنوان {title} مطمئن هستید", "توجه", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                int delet =Convert.ToInt32( dguser.CurrentRow.Cells[0].Value.ToString());
+                int delet = Convert.ToInt32(dguser.CurrentRow.Cells[0].Value.ToString());
                 Repository.Delete(delet);
                 BindeGrid();
             }
             else
             {
-                
+
             }
         }
 
         private void btnseeansweruser_Click(object sender, EventArgs e)
         {
             frmaddticket frmaddticket = new frmaddticket();
-            
+
             int contactid = Convert.ToInt32(dguser.CurrentRow.Cells[0].Value.ToString());
-            
+
             frmaddticket.contactid = contactid;
-            if (frmaddticket.ShowDialog()== DialogResult.OK)
+            if (frmaddticket.ShowDialog() == DialogResult.OK)
             {
                 BindeGrid();
             }

@@ -33,11 +33,6 @@ namespace MyTicketing
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dguser = new System.Windows.Forms.DataGridView();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.btnaddticket = new System.Windows.Forms.ToolStripButton();
-            this.btndeleteticket = new System.Windows.Forms.Button();
-            this.btnseeansweruser = new System.Windows.Forms.Button();
             this.ContactID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Namee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Family = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +41,11 @@ namespace MyTicketing
             this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.answer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.btnaddticket = new System.Windows.Forms.ToolStripButton();
+            this.btndeleteticket = new System.Windows.Forms.Button();
+            this.btnseeansweruser = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dguser)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -53,6 +53,7 @@ namespace MyTicketing
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.groupBox1.Location = new System.Drawing.Point(5, 33);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(776, 103);
@@ -62,6 +63,7 @@ namespace MyTicketing
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.groupBox2.Controls.Add(this.dguser);
             this.groupBox2.Location = new System.Drawing.Point(5, 142);
             this.groupBox2.Name = "groupBox2";
@@ -90,57 +92,6 @@ namespace MyTicketing
             this.dguser.ReadOnly = true;
             this.dguser.Size = new System.Drawing.Size(767, 202);
             this.dguser.TabIndex = 0;
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.btnaddticket});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(784, 25);
-            this.toolStrip1.TabIndex = 2;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "رفرش";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // btnaddticket
-            // 
-            this.btnaddticket.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnaddticket.Image = ((System.Drawing.Image)(resources.GetObject("btnaddticket.Image")));
-            this.btnaddticket.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnaddticket.Name = "btnaddticket";
-            this.btnaddticket.Size = new System.Drawing.Size(23, 22);
-            this.btnaddticket.Text = "ثبت تیکت";
-            this.btnaddticket.Click += new System.EventHandler(this.btnaddticket_Click);
-            // 
-            // btndeleteticket
-            // 
-            this.btndeleteticket.Location = new System.Drawing.Point(697, 376);
-            this.btndeleteticket.Name = "btndeleteticket";
-            this.btndeleteticket.Size = new System.Drawing.Size(75, 23);
-            this.btndeleteticket.TabIndex = 3;
-            this.btndeleteticket.Text = "حذف تیکت";
-            this.btndeleteticket.UseVisualStyleBackColor = true;
-            this.btndeleteticket.Click += new System.EventHandler(this.btndeleteticket_Click);
-            // 
-            // btnseeansweruser
-            // 
-            this.btnseeansweruser.Location = new System.Drawing.Point(601, 376);
-            this.btnseeansweruser.Name = "btnseeansweruser";
-            this.btnseeansweruser.Size = new System.Drawing.Size(75, 23);
-            this.btnseeansweruser.TabIndex = 4;
-            this.btnseeansweruser.Text = "نمایش/جواب";
-            this.btnseeansweruser.UseVisualStyleBackColor = true;
-            this.btnseeansweruser.Click += new System.EventHandler(this.btnseeansweruser_Click);
             // 
             // ContactID
             // 
@@ -199,6 +150,57 @@ namespace MyTicketing
             this.answer.Name = "answer";
             this.answer.ReadOnly = true;
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.btnaddticket});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(784, 25);
+            this.toolStrip1.TabIndex = 2;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "رفرش";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // btnaddticket
+            // 
+            this.btnaddticket.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnaddticket.Image = ((System.Drawing.Image)(resources.GetObject("btnaddticket.Image")));
+            this.btnaddticket.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnaddticket.Name = "btnaddticket";
+            this.btnaddticket.Size = new System.Drawing.Size(23, 22);
+            this.btnaddticket.Text = "ثبت تیکت";
+            this.btnaddticket.Click += new System.EventHandler(this.btnaddticket_Click);
+            // 
+            // btndeleteticket
+            // 
+            this.btndeleteticket.Location = new System.Drawing.Point(697, 376);
+            this.btndeleteticket.Name = "btndeleteticket";
+            this.btndeleteticket.Size = new System.Drawing.Size(75, 23);
+            this.btndeleteticket.TabIndex = 3;
+            this.btndeleteticket.Text = "حذف تیکت";
+            this.btndeleteticket.UseVisualStyleBackColor = true;
+            this.btndeleteticket.Click += new System.EventHandler(this.btndeleteticket_Click);
+            // 
+            // btnseeansweruser
+            // 
+            this.btnseeansweruser.Location = new System.Drawing.Point(601, 376);
+            this.btnseeansweruser.Name = "btnseeansweruser";
+            this.btnseeansweruser.Size = new System.Drawing.Size(75, 23);
+            this.btnseeansweruser.TabIndex = 4;
+            this.btnseeansweruser.Text = "نمایش/جواب";
+            this.btnseeansweruser.UseVisualStyleBackColor = true;
+            this.btnseeansweruser.Click += new System.EventHandler(this.btnseeansweruser_Click);
+            // 
             // frmuser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,6 +212,7 @@ namespace MyTicketing
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.Red;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmuser";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;

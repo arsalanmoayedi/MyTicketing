@@ -26,6 +26,7 @@ namespace MyTicketing
 
         private void frmadmin_Load(object sender, EventArgs e)
         {
+           
             BindGrid();
            
         }
@@ -37,12 +38,14 @@ namespace MyTicketing
 
         private void btnseeticketaddmin_Click(object sender, EventArgs e)
         {
-            frmaddticket seefrm = new frmaddticket();
-            seefrm.ShowDialog();
-            if (DialogResult==DialogResult.OK)
+            frmseeticketadmin frmseeadmin = new frmseeticketadmin();
+          int contactid= Convert.ToInt32( dgadmin.CurrentRow.Cells[0].Value.ToString());
+            frmseeadmin.contactid = contactid;
+            if (frmseeadmin.ShowDialog()==DialogResult.OK)
             {
                 BindGrid();
             }
+
         }
     }
 }

@@ -89,6 +89,9 @@
     <EmbeddedResource Include="frmadmin.resx">
       <DependentUpon>frmadmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmseeticketadmin.resx">
+      <DependentUpon>frmseeticketadmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmuser.resx">
       <DependentUpon>frmuser.cs</DependentUpon>
     </EmbeddedResource>

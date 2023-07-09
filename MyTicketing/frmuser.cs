@@ -47,15 +47,29 @@ namespace MyTicketing
 
         private void btndeleteticket_Click(object sender, EventArgs e)
         {
-            
-            if (MessageBox.Show(" آیا از حذف تیکت  مطمئن هستید", "توجه", MessageBoxButtons.YesNo, MessageBoxIcon.Information)==DialogResult.Yes)
+            string title = dguser.CurrentRow.Cells[5].Value.ToString();
+            if (MessageBox.Show($" آیا از حذف تیکت با عنوان {title} مطمئن هستید", "توجه", MessageBoxButtons.YesNo, MessageBoxIcon.Information)==DialogResult.Yes)
             {
                 int delet =Convert.ToInt32( dguser.CurrentRow.Cells[0].Value.ToString());
                 Repository.Delete(delet);
+                BindeGrid();
             }
             else
             {
                 
+            }
+        }
+
+        private void btnseeansweruser_Click(object sender, EventArgs e)
+        {
+            frmaddticket frmaddticket = new frmaddticket();
+            
+            int contactid = Convert.ToInt32(dguser.CurrentRow.Cells[0].Value.ToString());
+            
+            frmaddticket.contactid = contactid;
+            if (frmaddticket.ShowDialog()== DialogResult.OK)
+            {
+                BindeGrid();
             }
         }
     }

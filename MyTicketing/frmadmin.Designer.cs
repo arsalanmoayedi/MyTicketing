@@ -31,7 +31,10 @@ namespace MyTicketing
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmadmin));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnseeticketaddmin = new System.Windows.Forms.Button();
             this.dgadmin = new System.Windows.Forms.DataGridView();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnrefrshadmin = new System.Windows.Forms.ToolStripButton();
             this.ContactID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Namee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Family = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,9 +42,7 @@ namespace MyTicketing
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnrefrshadmin = new System.Windows.Forms.ToolStripButton();
-            this.btnseeticketaddmin = new System.Windows.Forms.Button();
+            this.answerr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgadmin)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -58,6 +59,16 @@ namespace MyTicketing
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "خوش اومدید ادمین";
             // 
+            // btnseeticketaddmin
+            // 
+            this.btnseeticketaddmin.Location = new System.Drawing.Point(679, 383);
+            this.btnseeticketaddmin.Name = "btnseeticketaddmin";
+            this.btnseeticketaddmin.Size = new System.Drawing.Size(75, 23);
+            this.btnseeticketaddmin.TabIndex = 1;
+            this.btnseeticketaddmin.Text = "نمایش/جواب";
+            this.btnseeticketaddmin.UseVisualStyleBackColor = true;
+            this.btnseeticketaddmin.Click += new System.EventHandler(this.btnseeticketaddmin_Click);
+            // 
             // dgadmin
             // 
             this.dgadmin.AllowUserToAddRows = false;
@@ -71,12 +82,33 @@ namespace MyTicketing
             this.PhoneNumber,
             this.Email,
             this.Title,
-            this.Description});
+            this.Description,
+            this.answerr});
             this.dgadmin.Location = new System.Drawing.Point(-6, 132);
             this.dgadmin.Name = "dgadmin";
             this.dgadmin.ReadOnly = true;
             this.dgadmin.Size = new System.Drawing.Size(760, 245);
             this.dgadmin.TabIndex = 0;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnrefrshadmin});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(784, 25);
+            this.toolStrip1.TabIndex = 1;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // btnrefrshadmin
+            // 
+            this.btnrefrshadmin.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnrefrshadmin.Image = ((System.Drawing.Image)(resources.GetObject("btnrefrshadmin.Image")));
+            this.btnrefrshadmin.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnrefrshadmin.Name = "btnrefrshadmin";
+            this.btnrefrshadmin.Size = new System.Drawing.Size(23, 22);
+            this.btnrefrshadmin.Text = "رفرش";
+            this.btnrefrshadmin.Click += new System.EventHandler(this.btnrefrshadmin_Click);
             // 
             // ContactID
             // 
@@ -128,35 +160,12 @@ namespace MyTicketing
             this.Description.Name = "Description";
             this.Description.ReadOnly = true;
             // 
-            // toolStrip1
+            // answerr
             // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnrefrshadmin});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(784, 25);
-            this.toolStrip1.TabIndex = 1;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // btnrefrshadmin
-            // 
-            this.btnrefrshadmin.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnrefrshadmin.Image = ((System.Drawing.Image)(resources.GetObject("btnrefrshadmin.Image")));
-            this.btnrefrshadmin.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnrefrshadmin.Name = "btnrefrshadmin";
-            this.btnrefrshadmin.Size = new System.Drawing.Size(23, 22);
-            this.btnrefrshadmin.Text = "رفرش";
-            this.btnrefrshadmin.Click += new System.EventHandler(this.btnrefrshadmin_Click);
-            // 
-            // btnseeticketaddmin
-            // 
-            this.btnseeticketaddmin.Location = new System.Drawing.Point(679, 383);
-            this.btnseeticketaddmin.Name = "btnseeticketaddmin";
-            this.btnseeticketaddmin.Size = new System.Drawing.Size(75, 23);
-            this.btnseeticketaddmin.TabIndex = 1;
-            this.btnseeticketaddmin.Text = "نمایش کلی";
-            this.btnseeticketaddmin.UseVisualStyleBackColor = true;
-            this.btnseeticketaddmin.Click += new System.EventHandler(this.btnseeticketaddmin_Click);
+            this.answerr.DataPropertyName = "answer";
+            this.answerr.HeaderText = "جواب تیکت";
+            this.answerr.Name = "answerr";
+            this.answerr.ReadOnly = true;
             // 
             // frmadmin
             // 
@@ -187,6 +196,7 @@ namespace MyTicketing
         private System.Windows.Forms.DataGridView dgadmin;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnrefrshadmin;
+        private System.Windows.Forms.Button btnseeticketaddmin;
         private System.Windows.Forms.DataGridViewTextBoxColumn ContactID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Namee;
         private System.Windows.Forms.DataGridViewTextBoxColumn Family;
@@ -194,6 +204,6 @@ namespace MyTicketing
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Title;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
-        private System.Windows.Forms.Button btnseeticketaddmin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn answerr;
     }
 }

@@ -11,3 +11,4 @@ D:\trc#\MyTicketing\MyTicketing\obj\Debug\MyTicketing.pdb
 D:\trc#\MyTicketing\MyTicketing\obj\Debug\MyTicketing.frmadmin.resources
 D:\trc#\MyTicketing\MyTicketing\obj\Debug\MyTicketing.frmuser.resources
 D:\trc#\MyTicketing\MyTicketing\obj\Debug\MyTicketing.frmaddticket.resources
+D:\trc#\MyTicketing\MyTicketing\obj\Debug\MyTicketing.frmseeticketadmin.resources

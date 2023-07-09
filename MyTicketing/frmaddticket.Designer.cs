@@ -42,7 +42,6 @@ namespace MyTicketing
             this.txtdescription = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnsubmitticket = new System.Windows.Forms.Button();
-            this.btnseeanswerticket = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -144,7 +143,7 @@ namespace MyTicketing
             // 
             // btnsubmitticket
             // 
-            this.btnsubmitticket.Location = new System.Drawing.Point(713, 415);
+            this.btnsubmitticket.Location = new System.Drawing.Point(633, 415);
             this.btnsubmitticket.Name = "btnsubmitticket";
             this.btnsubmitticket.Size = new System.Drawing.Size(75, 23);
             this.btnsubmitticket.TabIndex = 12;
@@ -152,21 +151,11 @@ namespace MyTicketing
             this.btnsubmitticket.UseVisualStyleBackColor = true;
             this.btnsubmitticket.Click += new System.EventHandler(this.btnsubmitticket_Click);
             // 
-            // btnseeanswerticket
-            // 
-            this.btnseeanswerticket.Location = new System.Drawing.Point(113, 415);
-            this.btnseeanswerticket.Name = "btnseeanswerticket";
-            this.btnseeanswerticket.Size = new System.Drawing.Size(489, 23);
-            this.btnseeanswerticket.TabIndex = 13;
-            this.btnseeanswerticket.Text = "دیدن جواب تیکت";
-            this.btnseeanswerticket.UseVisualStyleBackColor = true;
-            // 
             // frmaddticket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnseeanswerticket);
             this.Controls.Add(this.btnsubmitticket);
             this.Controls.Add(this.txtdescription);
             this.Controls.Add(this.label6);
@@ -207,6 +196,5 @@ namespace MyTicketing
         private System.Windows.Forms.TextBox txtdescription;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnsubmitticket;
-        private System.Windows.Forms.Button btnseeanswerticket;
     }
 }

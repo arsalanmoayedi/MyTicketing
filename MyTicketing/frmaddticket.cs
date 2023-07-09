@@ -54,12 +54,43 @@ namespace MyTicketing
             }
             return true;
         }
+
+        private void frmaddticket_Load(object sender, EventArgs e)
+        {
+            if (contactid == 0)
+            {
+                this.Text = "اضافه تیکت";
+            }
+            else
+            {
+                this.Text = "نمابش دیدن جواب";
+                DataTable dg = Repository.SelectRow(contactid);
+                txtname.Text = dg.Rows[0][1].ToString();
+                txtfamily.Text = dg.Rows[0][2].ToString();
+                txtphonenumber.Text = dg.Rows[0][3].ToString();
+                txtemail.Text = dg.Rows[0][4].ToString();
+                txttitle.Text = dg.Rows[0][5].ToString();
+                txtdescription.Text = dg.Rows[0][6].ToString();
+                btnsubmitticket.Text = "دیدن جواب";
+            }
+        }
         private void btnsubmitticket_Click(object sender, EventArgs e)
         {
             if (ValidateInput())
             {
-                bool issucces = Repository.Insert(txtname.Text, txtfamily.Text, txtphonenumber.Text, txtemail.Text, txttitle.Text, txtdescription.Text);
-                if (issucces==true)
+                bool inssucces;
+                if (contactid==0)
+                {
+                    Repository.Insert(txtname.Text, txtfamily.Text, txtphonenumber.Text, txtemail.Text, txttitle.Text, txtdescription.Text);
+                    inssucces = true;
+                }
+                else
+                {
+                    MessageBox.Show("برگرد عقب داش");
+                    inssucces = true;
+                }
+               
+                if (inssucces==true)
                 {
                     MessageBox.Show(" عملیات با موفقیت انجام شد", "موفق", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     DialogResult = DialogResult.OK;
@@ -67,16 +98,11 @@ namespace MyTicketing
                 else
                 {
                     MessageBox.Show(" عملیات با موفقیت انجام نشد", "ناموفق", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
                 }
+                
             }
         }
 
-        private void frmaddticket_Load(object sender, EventArgs e)
-        {
-            if (contactid==0)
-            {
-                this.Text = "اضافه تیکت";
-            }
-        }
     }
 }
